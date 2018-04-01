@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Methods</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                {{count}}
+                <button type="button" @click="increment">Increment</button>
+                <button type="button" @click="showDialog">Pop Up</button>
+                <button type="button" @click="decrement">Decrement</button>
+            </div>
+            <div>
+                {{date}}
+                <button type="button" @click="dateNow">Date Now</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                count: 0,
+                date: new Date('1995-07-16')
+            },
+            methods: {
+                increment() {
+                    this.count = this.count + 10
+                },
+                showDialog() {
+                    window.confirm('Hello World!!')
+                },
+                decrement() {
+                    this.count--
+                },
+                dateNow() {
+                    this.date = Date()
+                }
+            }
+        })
+    </script>
+</html>

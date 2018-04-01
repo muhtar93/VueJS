@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>If Else</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div v-if='nilai >= 0 && nilai <= 40'>E</div>
+            <div v-else-if='nilai >= 41 && nilai <= 60'>D</div>
+            <div v-else-if='nilai >= 61 && nilai <= 70'>C</div>
+            <div v-else-if='nilai >= 71 && nilai <= 84'>B</div>
+            <div v-else-if='nilai >= 85 && nilai <= 100'>A</div>
+            <div v-else>Tidak punya nilai</div>
+        </div>
+    </body>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                nilai: 90
+            }
+        })
+    </script>
+</html>

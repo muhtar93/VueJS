@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Variabel</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="app">
+            Nama saya {{nama}} <br>
+            Umur saya {{umur}} tahun
+        </div>
+    </body>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                nama: 'Muhtar',
+                umur: 17
+            }
+        })
+    </script>
+</html>
